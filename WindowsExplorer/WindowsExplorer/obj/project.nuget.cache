@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mxl7jR03Gf4Brr8LvOdCrhdOWQIkgZzMClAE9Ax91CavO2Dzow1kvyauhcJ7u5gfFPEGVzROs4H74/BGEvCRQg==",
+  "dgSpecHash": "QPENHw3AOzaTE2+MDdLl5q6iJ31f6rRjttZWNy2d0IyWu7UdF85d1DSBODphhpbk/bW4AZCLVOPjs+GkQTyWiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zohir\\OneDrive\\Desktop\\Training Projects\\WindowsExplorer\\WindowsExplorer\\WindowsExplorer.csproj",
+  "projectFilePath": "C:\\Users\\zohir\\OneDrive\\Desktop\\Training Projects\\WindowsExplorer\\WindowsExplorer\\WindowsExplorer\\WindowsExplorer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zohir\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\zohir\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
