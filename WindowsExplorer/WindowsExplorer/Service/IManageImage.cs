@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace API.FileProcessing.Service
+namespace WindowsExplorer.Service
 {
     public interface IManageImage
     {

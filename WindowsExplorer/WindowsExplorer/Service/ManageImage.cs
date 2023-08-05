@@ -1,7 +1,7 @@
-﻿using API.FileProcessing.Helper;
-using Microsoft.AspNetCore.StaticFiles;
+﻿using Microsoft.AspNetCore.StaticFiles;
+using WindowsExplorer.Helper;
 
-namespace API.FileProcessing.Service
+namespace WindowsExplorer.Service
 {
     public class ManageImage : IManageImage
     {
@@ -13,7 +13,7 @@ namespace API.FileProcessing.Service
                 FileInfo _FileInfo = new FileInfo(_IFormFile.FileName);
                 var FileFirstExtName = "--" + DateTime.Now.Ticks.ToString() +  "--";
                 FileName = FileFirstExtName + _IFormFile.FileName;
-                var _GetFilePath = Common.GetFilePath(FileName);
+                var _GetFilePath = PathHelper.GetFilePath(FileName);
                 using (var _FileStream = new FileStream(_GetFilePath, FileMode.Create))
                 {
                     await _IFormFile.CopyToAsync(_FileStream);
@@ -30,7 +30,7 @@ namespace API.FileProcessing.Service
         {
             try
             {
-                var _GetFilePath = Common.GetFilePath(FileName);
+                var _GetFilePath = PathHelper.GetFilePath(FileName);
                 var provider = new FileExtensionContentTypeProvider();
                 if (!provider.TryGetContentType(_GetFilePath, out var _ContentType))
                 {

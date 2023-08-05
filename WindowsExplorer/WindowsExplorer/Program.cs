@@ -1,4 +1,4 @@
-using API.FileProcessing.Service;
+using WindowsExplorer.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
