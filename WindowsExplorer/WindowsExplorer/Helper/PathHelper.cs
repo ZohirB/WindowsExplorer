@@ -19,7 +19,7 @@ public class PathHelper
         return result;
         //headup dir (ex... C:\\Users\\zohir\\OneDrive\\Desktop\\Training Projects\\WindowsExplorer\\WindowsExplorer\\WindowsExplorer\\Uploads\\StaticContent\\)
     }
-    public static string GetFilePath(string FileName)
+    public static string GetFilePath(string FileName,int idFolder)
     {
         var _GetStaticContentDirectory = GetStaticContentDirectory();
         var result = Path.Combine(_GetStaticContentDirectory, FileName);

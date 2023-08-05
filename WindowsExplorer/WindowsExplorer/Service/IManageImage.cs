@@ -4,7 +4,7 @@ namespace WindowsExplorer.Service
 {
     public interface IManageImage
     {
-        Task<string> UploadFile(IFormFile _IFormFile);
-        Task<(byte[], string, string)> DownloadFile(string FileName);
+        Task<string> UploadFile(IFormFile _IFormFile, int idFolder);
+        Task<(byte[], string, string)> DownloadFile(string FileName, int idFolder);
     }
 }

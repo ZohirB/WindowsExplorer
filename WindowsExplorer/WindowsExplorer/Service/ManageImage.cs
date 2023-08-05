@@ -5,7 +5,7 @@ namespace WindowsExplorer.Service
 {
     public class ManageImage : IManageImage
     {
-        public async Task<string> UploadFile(IFormFile _IFormFile)
+        public async Task<string> UploadFile(IFormFile _IFormFile, int idFolder)
         {
             string FileName = "";
             try
@@ -13,7 +13,7 @@ namespace WindowsExplorer.Service
                 FileInfo _FileInfo = new FileInfo(_IFormFile.FileName);
                 var FileFirstExtName = "--" + DateTime.Now.Ticks.ToString() +  "--";
                 FileName = FileFirstExtName + _IFormFile.FileName;
-                var _GetFilePath = PathHelper.GetFilePath(FileName);
+                var _GetFilePath = PathHelper.GetFilePath(FileName,idFolder);
                 using (var _FileStream = new FileStream(_GetFilePath, FileMode.Create))
                 {
                     await _IFormFile.CopyToAsync(_FileStream);
@@ -26,11 +26,11 @@ namespace WindowsExplorer.Service
             }
         }
         
-        public async Task<(byte[], string, string)> DownloadFile(string FileName)
+        public async Task<(byte[], string, string)> DownloadFile(string FileName, int idFolder)
         {
             try
             {
-                var _GetFilePath = PathHelper.GetFilePath(FileName);
+                var _GetFilePath = PathHelper.GetFilePath(FileName,idFolder);
                 var provider = new FileExtensionContentTypeProvider();
                 if (!provider.TryGetContentType(_GetFilePath, out var _ContentType))
                 {
