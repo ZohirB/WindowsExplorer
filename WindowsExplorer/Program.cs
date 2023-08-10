@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using WindowsExplorer.Models;
 using WindowsExplorer.Service;
-using FileInfo = System.IO.FileInfo;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -26,17 +25,14 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Title = "Windows Explorer",
         Description = "Mini Windows Explorer system With API",
-        //TermsOfService = new Uri("https://www.google.com"),
         Contact = new OpenApiContact
         {
             Name = "Zohir Boshi",
             Email = "zohirboshi@gmail.com",
-            //Url = new Uri("https://www.google.com")
         },
         License = new OpenApiLicense
         {
             Name = "My license",
-            //Url = new Uri("https://www.google.com")
         }
     });
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

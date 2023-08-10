@@ -11,8 +11,8 @@ using WindowsExplorer.Models;
 namespace WindowsExplorer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230805121857_initial")]
-    partial class initial
+    [Migration("20230810113113_mainMigrations")]
+    partial class mainMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

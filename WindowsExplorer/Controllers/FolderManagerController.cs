@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WindowsExplorer.Service;
 
-namespace FileUploadDownload.Controllers
+namespace WindowsExplorer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

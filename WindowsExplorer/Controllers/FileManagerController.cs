@@ -1,7 +1,7 @@
 ﻿using WindowsExplorer.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FileUploadDownload.Controllers
+namespace WindowsExplorer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,16 +21,16 @@ namespace FileUploadDownload.Controllers
         }
         
         [HttpGet]
-        public async Task<string> DownloadFileByName(string FileName, int idFolder)
+        public async Task<string> DownloadFileByName(string fileName, int idFolder)
         {
-            var result = await _fileManagerService.DownloadFileByName(FileName, idFolder);
+            var result = await _fileManagerService.DownloadFileByName(fileName, idFolder);
             return result;
         }
         
         [HttpPost]
-        public async Task<IActionResult> UploadFile([FromForm] IFormFile _IFormFile, string fileName, int idFolder)
+        public async Task<IActionResult> UploadFile([FromForm] IFormFile iFormFile, string fileName, int idFolder)
         {
-            var result = await _fileManagerService.UploadFile(_IFormFile, fileName, idFolder);
+            var result = await _fileManagerService.UploadFile(iFormFile, fileName, idFolder);
             if (result != "")
             {
                 return Ok(result); 
@@ -83,9 +83,9 @@ namespace FileUploadDownload.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> RenameFileByName(string FileName, int idFolder)
+        public async Task<IActionResult> RenameFileByName(string fileName, int idFolder)
         {
-            var result = await _fileManagerService.RenameFileByName(FileName, idFolder);
+            var result = await _fileManagerService.RenameFileByName(fileName, idFolder);
             if (result != "")
             {
                 return Ok(result); 

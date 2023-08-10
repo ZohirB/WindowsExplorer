@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace WindowsExplorer.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class mainMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
