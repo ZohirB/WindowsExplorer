@@ -21,8 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
-      <Folder Include="Uploads\StaticContent\" />
+      <Folder Include="MainDIR\" />
     </ItemGroup>
 
 </Project>
