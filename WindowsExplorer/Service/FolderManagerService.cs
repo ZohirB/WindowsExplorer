@@ -1,4 +1,6 @@
-﻿namespace WindowsExplorer.Service;
+﻿using WindowsExplorer.Models;
+
+namespace WindowsExplorer.Service;
 
 public class FolderManagerService : IFolderManagerService
 {
@@ -17,7 +19,7 @@ public class FolderManagerService : IFolderManagerService
         throw new NotImplementedException();
     }
 
-    public Task RemoveFolder(int idFile)
+    public FolderInfo RemoveFolder(int idFile)
     {
         throw new NotImplementedException();
     }

@@ -12,7 +12,7 @@ public interface IFileManagerService
     Task<string> MoveFile(int idFile, int idDestenationFolder);
     
     //Remove Section
-    Task RemoveFile(int idFile);
+    FileInfo RemoveFile(int idFile);
     
     //Rename Section
     Task<string> RenameFileById(int idFile);

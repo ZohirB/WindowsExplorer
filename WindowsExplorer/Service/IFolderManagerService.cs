@@ -1,8 +1,10 @@
-﻿namespace WindowsExplorer.Service;
+﻿using WindowsExplorer.Models;
+
+namespace WindowsExplorer.Service;
 
 public interface IFolderManagerService
 {
-    //Upload Section
+    //Create Section
     Task<string> CreateFolder(string folderName, int idParentFolder);
     
     //Copy Section
@@ -12,7 +14,7 @@ public interface IFolderManagerService
     Task<string> MoveFolder(int idSourceFolder, int idDestenationFolder);
     
     //Remove Section
-    Task RemoveFolder(int idFolder);
+    FolderInfo RemoveFolder(int idFolder);
     
     //Rename Section
     Task<string> RenameFolderById(int idFolder);
